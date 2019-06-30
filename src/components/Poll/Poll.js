@@ -8,8 +8,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 // Misc
-import Types from './../utils/types';
-import Loading from './Loading';
+import Types from './../../utils/types';
+import Loading from './../Loading';
 import PollAnswered from './PollAnswered';
 import PollUnanswered from './PollUnanswered';
 

@@ -14,7 +14,7 @@ import UnansweredIcon from '@material-ui/icons/InfoRounded';
 import Loading from './Loading';
 import Types from './../utils/types';
 import TabContainer from './TabContainer';
-import QuestionList from './QuestionList';
+import QuestionList from './Questions/QuestionList';
 
 const styles = theme => ({
   root: {

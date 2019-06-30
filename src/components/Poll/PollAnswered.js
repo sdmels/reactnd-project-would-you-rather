@@ -10,8 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import VotedIcon from '@material-ui/icons/CheckCircleOutline';
 
 // Misc
-import Types from './../utils/types';
-import AuthorData from './AuthorData';
+import Types from './../../utils/types';
+import AuthorData from './../AuthorData';
 
 const styles = theme => ({
   root: {

@@ -7,7 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 // Misc
-import Types from './../utils/types';
+import Types from './../../utils/types';
 
 // Styles
 const styles = theme => ({

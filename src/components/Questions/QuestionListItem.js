@@ -12,9 +12,9 @@ import Grid from '@material-ui/core/Grid';
 import PlusIcon from '@material-ui/icons/Add';
 
 // Misc
-import history from './../utils/history';
-import routes from './../utils/routes';
-import AuthorData from './AuthorData';
+import history from './../../utils/history';
+import routes from './../../utils/routes';
+import AuthorData from './../AuthorData';
 
 const styles = {
   card: {

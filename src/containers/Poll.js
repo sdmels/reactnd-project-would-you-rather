@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Poll from './../components/Poll';
+import Poll from '../components/Poll/Poll';
 
 import { sendVote } from './../actions/polls';
 import { fetchQuestion } from './../actions/questions';
