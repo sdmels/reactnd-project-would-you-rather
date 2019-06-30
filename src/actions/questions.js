@@ -1,4 +1,4 @@
-import { getQuestions, getQuestion } from '../utils/api';
+import { getQuestions, getQuestion } from './../utils/api';
 
 export const SET_QUESTION = 'SET_QUESTION';
 export const SAVE_QUESTIONS = 'SAVE_QUESTIONS';

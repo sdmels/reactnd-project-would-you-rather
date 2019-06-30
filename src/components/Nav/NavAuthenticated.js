@@ -24,9 +24,9 @@ import AddIcon from '@material-ui/icons/LibraryAdd';
 import LeaderboardIcon from '@material-ui/icons/Dashboard';
 
 // Misc
-import Types from '../../utils/types';
-import history from '../../utils/history';
-import routes from '../../utils/routes';
+import Types from './../../utils/types';
+import history from './../../utils/history';
+import routes from './../../utils/routes';
 
 const drawerWidth = 240;
 

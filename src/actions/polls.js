@@ -1,7 +1,7 @@
-import history from '../utils/history';
-import routes from '../utils/routes';
+import history from './../utils/history';
+import routes from './../utils/routes';
 import { fetchQuestion } from './questions';
-import { saveQuestionAnswer, saveQuestion } from '../utils/api';
+import { saveQuestionAnswer, saveQuestion } from './../utils/api';
 
 function redirectToHome() {
   history.push({

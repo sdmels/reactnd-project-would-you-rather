@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import Poll from '../components/Poll/Poll';
+import Poll from './../components/Poll/Poll';
 
 import { sendVote } from './../actions/polls';
 import { fetchQuestion } from './../actions/questions';
 
-import { getFromLocalStorage } from '../utils/localStorage';
+import { getFromLocalStorage } from './../utils/localStorage';
 import commons from './../utils/commons';
 
 function mapStateToProps({ questions, users }) {

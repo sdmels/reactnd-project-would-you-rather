@@ -18,9 +18,9 @@ import VoteIcon from '@material-ui/icons/ThumbUp';
 import Button from '@material-ui/core/Button';
 
 // Misc
-import Types from '../../utils/types';
-import Loading from '../Loading';
-import AuthorData from '../AuthorData';
+import Types from './../../utils/types';
+import Loading from './../Loading';
+import AuthorData from './../AuthorData';
 
 const VALUE_OPTION_ONE = 'optionOne';
 const VALUE_OPTION_TWO = 'optionTwo';

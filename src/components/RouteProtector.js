@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import routes from './../utils/routes';
 import commons from './../utils/commons';
-import { getFromLocalStorage } from '../utils/localStorage';
+import { getFromLocalStorage } from './../utils/localStorage';
 
 export default (ProtectedRoute) => {
   class AuthHOC extends Component {

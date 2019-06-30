@@ -1,7 +1,7 @@
-import history from '../utils/history';
-import routes from '../utils/routes';
-import commons from '../utils/commons';
-import { saveOnLocalStorage, removeFromLocalStorage } from '../utils/localStorage';
+import history from './../utils/history';
+import routes from './../utils/routes';
+import commons from './../utils/commons';
+import { saveOnLocalStorage, removeFromLocalStorage } from './../utils/localStorage';
 
 export const LOGGED_IN = 'LOGGED_IN';
 export const LOGGED_OUT = 'LOGGED_OUT';
