@@ -14,12 +14,12 @@ In the project directory, you can run:
 Run the below command to install the project dependency
 
 ```
-npm install or yarn
+npm install
 ```
 
 ## Runs the app
 ```
-npm run start or npm start or yarn start
+npm start
 ```
 
 Runs the app in the development mode.<br>
