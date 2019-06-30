@@ -5,7 +5,7 @@ const dateFormat = {
 };
 
 function dateNormalized(date) {
-  return new Date(date).toLocaleString('en-us', dateFormat);
+  return new Date(date).toLocaleString('en-AU', dateFormat);
 }
 
 export default dateNormalized;

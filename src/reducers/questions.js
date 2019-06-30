@@ -5,7 +5,7 @@ import {
 } from './../actions/questions';
 
 import commons from './../utils/commons';
-import { getFromLocalStorage } from './../utils/localstorage';
+import { getFromLocalStorage } from '../utils/localStorage';
 
 const defaultState = {
   all: [],

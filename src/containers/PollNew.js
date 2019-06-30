@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import PollNew from '../components/Poll/PollNew';
 import commons from './../utils/commons';
 import { sendQuestion } from './../actions/polls';
-import { getFromLocalStorage } from './../utils/localstorage';
+import { getFromLocalStorage } from '../utils/localStorage';
 
 function mapStateToProps() {
   return {
