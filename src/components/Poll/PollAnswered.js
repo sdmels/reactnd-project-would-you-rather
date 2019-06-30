@@ -46,7 +46,7 @@ const PollAnswered = (props) => {
     author,
     classes,
     question,
-    authedUser,
+    authenticatedUser,
   } = props;
 
   const { timestamp, optionOne, optionTwo } = question;
@@ -69,8 +69,8 @@ const PollAnswered = (props) => {
     </p>
   );
 
-  const isAuthedUserVoted = (optionVotes) => {
-    const checkVotes = optionVotes.find(vote => vote === authedUser.id);
+  const isAuthenticatedUserVoted = (optionVotes) => {
+    const checkVotes = optionVotes.find(vote => vote === authenticatedUser.id);
     return checkVotes ? yourVote() : null;
   };
 
@@ -90,7 +90,7 @@ const PollAnswered = (props) => {
               {optionOne.text}
             </Typography>
             {getNumeberOfPeopleVoted(optionOne.votes)}
-            {isAuthedUserVoted(optionOne.votes)}
+            {isAuthenticatedUserVoted(optionOne.votes)}
           </Grid>
         </Grid>
         <Grid item xs={12} md={6} className={classes.center}>
@@ -102,7 +102,7 @@ const PollAnswered = (props) => {
               {optionTwo.text}
             </Typography>
             {getNumeberOfPeopleVoted(optionTwo.votes)}
-            {isAuthedUserVoted(optionTwo.votes)}
+            {isAuthenticatedUserVoted(optionTwo.votes)}
           </Grid>
         </Grid>
       </Grid>
@@ -114,7 +114,7 @@ PollAnswered.propTypes = {
   author: PropTypes.shape().isRequired,
   classes: PropTypes.shape().isRequired,
   question: Types.question.isRequired,
-  authedUser: PropTypes.shape().isRequired,
+  authenticatedUser: PropTypes.shape().isRequired,
 };
 
 export default withStyles(styles)(PollAnswered);

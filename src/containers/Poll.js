@@ -11,7 +11,7 @@ function mapStateToProps({ questions, users }) {
   return {
     users,
     question: questions.question,
-    getAuthedUserData: () => getFromLocalStorage(commons.user),
+    getAuthenticatedUserData: () => getFromLocalStorage(commons.user),
   };
 }
 

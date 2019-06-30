@@ -4,23 +4,23 @@ import isEmpty from 'lodash.isempty';
 
 // Misc
 import NavSimple from './NavSimple';
-import NavAuthed from './NavAuthed';
+import NavAuthenticated from './NavAuthenticated';
 
 
 const Nav = (props) => {
-  const { getAuthedUserData, onLogout } = props;
-  const authedUser = getAuthedUserData();
+  const { getAuthenticatedUserData, onLogout } = props;
+  const authenticatedUser = getAuthenticatedUserData();
 
   return (
-    isEmpty(authedUser)
+    isEmpty(authenticatedUser)
       ? <NavSimple />
-      : <NavAuthed onLogout={onLogout} authedUser={authedUser} />
+      : <NavAuthenticated onLogout={onLogout} authenticatedUser={authenticatedUser} />
   );
 };
 
 Nav.propTypes = {
   onLogout: PropTypes.func.isRequired,
-  getAuthedUserData: PropTypes.func.isRequired,
+  getAuthenticatedUserData: PropTypes.func.isRequired,
 };
 
 export default Nav;

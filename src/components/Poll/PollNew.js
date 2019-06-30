@@ -47,9 +47,9 @@ class PollNew extends Component {
     }
   }
 
-  getAuthedData() {
-    const { getAuthedUserData } = this.props;
-    return getAuthedUserData();
+  getAuthenticatedUserData() {
+    const { getAuthenticatedUserData } = this.props;
+    return getAuthenticatedUserData();
   }
 
   handleChange = name => (event) => {
@@ -60,12 +60,12 @@ class PollNew extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const authedUser = this.getAuthedData();
+    const authenticatedUser = this.getAuthenticatedUserData();
     const { handleSendQuestion } = this.props;
     const { optionOneText, optionTwoText } = this.state;
 
     handleSendQuestion({
-      author: authedUser.id,
+      author: authenticatedUser.id,
       optionOneText,
       optionTwoText,
     });
@@ -131,7 +131,7 @@ PollNew.propTypes = {
   classes: PropTypes.shape().isRequired,
   isUserLogged: PropTypes.func.isRequired,
   redirectToLogin: PropTypes.func.isRequired,
-  getAuthedUserData: PropTypes.func.isRequired,
+  getAuthenticatedUserData: PropTypes.func.isRequired,
   handleSendQuestion: PropTypes.func.isRequired,
 };
 

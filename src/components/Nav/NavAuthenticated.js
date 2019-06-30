@@ -24,9 +24,9 @@ import AddIcon from '@material-ui/icons/LibraryAdd';
 import LeaderboardIcon from '@material-ui/icons/Dashboard';
 
 // Misc
-import Types from './../../utils/types';
-import history from './../../utils/history';
-import routes from './../../utils/routes';
+import Types from '../../utils/types';
+import history from '../../utils/history';
+import routes from '../../utils/routes';
 
 const drawerWidth = 240;
 
@@ -118,7 +118,7 @@ function goToLeaderboard() {
   });
 }
 
-class NavAuthed extends Component {
+class NavAuthenticated extends Component {
   state = {
     open: false,
   }
@@ -132,12 +132,12 @@ class NavAuthed extends Component {
   };
 
   renderUserData() {
-    const { classes, onLogout, authedUser } = this.props;
+    const { classes, onLogout, authenticatedUser } = this.props;
 
     return (
       <Fragment>
         <Typography className={classes.user} variant="subtitle1" gutterBottom>
-          Hi {authedUser.name}
+          Hi {authenticatedUser.name}
         </Typography>
         <Button
           variant="contained"
@@ -249,10 +249,10 @@ class NavAuthed extends Component {
   }
 }
 
-NavAuthed.propTypes = {
+NavAuthenticated.propTypes = {
   classes: Types.classes.isRequired,
-  authedUser: PropTypes.shape().isRequired,
+  authenticatedUser: PropTypes.shape().isRequired,
   onLogout: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(NavAuthed);
+export default withStyles(styles)(NavAuthenticated);

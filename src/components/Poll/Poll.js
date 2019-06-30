@@ -69,9 +69,9 @@ class Poll extends Component {
       });
   }
 
-  getAuthedData() {
-    const { getAuthedUserData } = this.props;
-    return getAuthedUserData();
+  getAuthenticatedData() {
+    const { getAuthenticatedUserData } = this.props;
+    return getAuthenticatedUserData();
   }
 
   getAuthorData(author) {
@@ -87,7 +87,7 @@ class Poll extends Component {
   handleVote = (answer) => {
     const { match, handleVotePoll } = this.props;
     const { id: qid } = match.params;
-    const authedUser = this.getAuthedData();
+    const authenticatedUser = this.getAuthenticatedData();
 
     this.setState({
       sendingVote: true,
@@ -96,16 +96,16 @@ class Poll extends Component {
     handleVotePoll({
       qid,
       answer,
-      authedUser: authedUser.id,
+      authenticatedUser: authenticatedUser.id,
     });
   }
 
   isPollAnswered() {
     const { question } = this.props;
-    const authedUser = this.getAuthedData();
+    const authenticatedUser = this.getAuthenticatedData();
 
-    const optionsOne = question.optionOne.votes.find(id => id === authedUser.id);
-    const optionsTwo = question.optionTwo.votes.find(id => id === authedUser.id);
+    const optionsOne = question.optionOne.votes.find(id => id === authenticatedUser.id);
+    const optionsTwo = question.optionTwo.votes.find(id => id === authenticatedUser.id);
 
     return (optionsOne || optionsTwo);
   }
@@ -113,7 +113,7 @@ class Poll extends Component {
   render() {
     const { isLoading, error, sendingVote } = this.state;
     const { classes, question } = this.props;
-    const authedUser = this.getAuthedData();
+    const authenticatedUser = this.getAuthenticatedData();
 
     if (error) {
       return (
@@ -137,7 +137,7 @@ class Poll extends Component {
                 ? (
                   <PollAnswered
                     question={question}
-                    authedUser={authedUser}
+                    authenticatedUser={authenticatedUser}
                     author={this.getAuthorData(question.author)}
                   />
                 )
@@ -163,7 +163,7 @@ Poll.propTypes = {
   redirectToLogin: PropTypes.func.isRequired,
   question: Types.question.isRequired,
   users: PropTypes.shape().isRequired,
-  getAuthedUserData: PropTypes.func.isRequired,
+  getAuthenticatedUserData: PropTypes.func.isRequired,
   handleGetQuestion: PropTypes.func.isRequired,
   handleVotePoll: PropTypes.func.isRequired,
 };
